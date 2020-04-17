@@ -23,6 +23,13 @@ int main() {
 		cin >> pp;
 		cout << endl;
 
+		if (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(256, '\n');
+		}
+
+
 		
 		for (auto& p : fs :: directory_iterator("logs")) {
 			amount_of_el++;
